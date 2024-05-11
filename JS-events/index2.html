@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DOM Event Handler</h1>
+    <p id="mara-khaua">mara to onkdin khelam</p>
+    <p id="mara-khaua-2">Enter the name</p>
+    <input id="input" type="text">
+    <button id="update">update</button>
+    <br>
+    <br>
+
+    <button onclick="eventchange()">Handle Event by onclick function</button>
+
+
+    <script>
+
+        function eventchange(){
+            document.getElementById('mara-khaua').innerText='aro onek mara khete hobe';
+        }
+
+        const update=document.getElementById('update');
+        update.addEventListener('click',function(){
+
+            const input = document.getElementById('input');
+            const inputValue = input.value;
+
+            document.getElementById('mara-khaua-2').innerText = inputValue;
+            input.value='';
+
+        })
+
+    </script>
+</body>
+</html>

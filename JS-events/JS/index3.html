@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Aho vatija aho</h1>
+    <div id="comment-container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, nemo odit eius distinctio ipsum consequuntur, itaque labore fugiat expedita hic temporibus blanditiis dignissimos eum. Corporis eligendi illo reprehenderit a voluptates?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi odit alias dicta aperiam placeat, qui ullam adipisci dignissimos, maxime dolorem recusandae, inventore officia in laboriosam. Molestiae expedita nulla aperiam consequuntur!
+
+        </p>
+    </div>
+
+    <div>
+        <textarea name="" id="textarea"></textarea>
+        <br>
+        <button id="post">Post</button>
+    </div>
+
+
+    <script>
+
+        const commentContainer=document.getElementById('comment-container');
+        document.getElementById('post').addEventListener('click',function(){
+
+            const textarea=document.getElementById('textarea');
+            const textvalue=textarea.value;
+            console.log(textvalue);
+
+            
+
+            const p=document.createElement('p');
+            p.innerText=textvalue;
+
+            
+            commentContainer.appendChild(p);
+
+            textarea.value='';
+
+
+
+        })
+
+
+    </script>
+</body>
+</html>
